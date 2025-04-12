@@ -81,10 +81,11 @@ function search() {
 let suree=document.getElementById('sure')
 let btnyes=document.getElementById('btnyes')
 let btnno=document.getElementById('btnno')
+let content=document.getElementById('content')
 function sure(id){
 suree.style.display='block'
 localStorage.setItem('idremove',JSON.stringify(id))
-
+content.style.display='none'
 }
 btnyes.onclick=function(){
 id=JSON.parse(localStorage.idremove);
@@ -94,9 +95,10 @@ id=JSON.parse(localStorage.idremove);
   localStorage.setItem("clients", JSON.stringify(arr));
   Show();
   suree.style.display='none'
+  content.style.display='block'
 }
 btnno.onclick=function(){
 
 suree.style.display='none'
-
+content.style.display='block'
 }
