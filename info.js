@@ -45,11 +45,11 @@ function Show() {
     for (let i = 0; i < arr.length; i++) {
       table += `
   <tr>
-      <td >${arr[i]} دج</td>
+      <td class="tb" >${arr[i]} دج</td>
       
       
 
-      <td><button id="${i}" class="btnd" onclick="sure(this.id)">حذف</button></td>
+      <td class="tb"><button id="${i}" class="btnd" onclick="sure(this.id)">حذف</button></td>
    
   </tr>
   `;
