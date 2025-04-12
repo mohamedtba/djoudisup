@@ -1,17 +1,118 @@
-body{
-    background-color: rgb(50, 50, 50);
-    text-align: center;
-    position: relative;
-    height: 100vh;
-    }
-    h2,h4{
-        color: white;
-        text-shadow: 2px 2px 10px  black ;
-        font-size: 75px;
-    }
-    #client,#credit,#search{
+body {
+  background-color: rgb(50, 50, 50);
+  text-align: center;
+  position: relative;
+  height: 100vh;
+}
+h2,
+h4 {
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  font-size: 75px;
+}
+#client,
+#credit,
+#search {
+  width: 100%;
+  height: 80px;
+  border-radius: 30px;
+  outline: none;
+  background-color: black;
+  border: none;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.btn,
+.btnd,
+.btnr,
+.btna {
+  width: 50%;
+  height: 40px;
+  border-radius: 40px;
+  transition: 0.5s;
+  color: white;
+  background-color: rgb(89, 2, 203);
+  border: none;
+}
+.btn:hover,
+.btna:hover,
+.btnd:hover,
+.btnr:hover {
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: transparent;
+
+  background-color: rgb(52, 0, 125);
+}
+
+.btnd {
+  width: 60px;
+}
+table {
+  width: 100%;
+  color: white;
+  border: none;
+  margin-top: 30px;
+}
+#search {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.sree,.sre {
+  position: absolute;
+  top: 200px;
+  left: 38%;
+  background-color: grey;
+  border-radius: 30px;
+  height: 300px;
+  width: 300px;
+  display: none;
+}
+p {
+  margin-top: 90px;
+  font-size: 30px;
+}
+.btns {
+  width: 50%;
+  height: 40px;
+  border-radius: 40px;
+  transition: 0.5s;
+  color: white;
+  background-color: rgb(89, 2, 203);
+  border: none;
+  margin-bottom: 10px;
+}
+.btns:hover {
+  letter-spacing: 3px;
+  cursor: pointer;
+  background-color: transparent;
+
+  background-color: rgb(52, 0, 125);
+}
+.btnr {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+a {
+  text-decoration-line: none;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .infotitle {
+    font-size: 35px;
+  }
+  #credit {
+    height: 100px;
+  }
+  #client,
+  #search {
     width: 100%;
-    height: 80px;
+    height: 200px;
     border-radius: 30px;
     outline: none;
     background-color: black;
@@ -19,144 +120,43 @@ body{
     color: white;
     margin-bottom: 50px;
     margin-top: 20px;
-    }
-    .btn,.btnd,.btnr,.btna{
-        
+    font-size: 70px;
+  }
+  .btna {
     width: 50%;
-    height: 40px;
+    height: 50px;
     border-radius: 40px;
-    transition: .5s;
+    transition: 0.5s;
     color: white;
+    font-size: 30px;
     background-color: rgb(89, 2, 203);
     border: none;
-    }
-    .btn:hover,.btna:hover,.btnd:hover,.btnr:hover{
-    
-        letter-spacing: 3px;
-        cursor: pointer;
-        background-color: transparent;
-        
-        background-color: rgb(52, 0, 125);
-       
-    }
-    
-    
-    .btnd{
-        width: 60px;
-    }
-    table{
-    width: 100%;
-    color: white;
-    border: none;
-    margin-top: 30px;
-    }
-    #search{
+  }
+  .btn {
     width: 50%;
-    margin-bottom: 10px;
-    }
-    #sure{
-    position: absolute;
-    top: 200px;
-    left: 38%;
-    background-color: grey;
-    border-radius: 30px;
-    height: 300px;
-    width: 300px;
-    display: none;
-    }
-    p{
-    margin-top: 90px;
-    font-size: 30px;
-    }
-    .btns{
-        width: 50%;
-        height: 40px;
-        border-radius: 40px;
-        transition: .5s;
-        color: white;
-        background-color: rgb(89, 2, 203);
-        border: none;
-        margin-bottom: 10px;
-    }
-    .btns:hover{
-    
-        letter-spacing: 3px;
-        cursor: pointer;
-        background-color: transparent;
-        
-        background-color: rgb(52, 0, 125);
-       
-    }
-    .btnr{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    
-    
-    }
-    a{
-        text-decoration-line: none;
+    height: 100px;
+    border-radius: 40px;
+    transition: 0.5s;
     color: white;
-    }
-    @media  (max-width:1200px){
+    font-size: 40px;
+    background-color: rgb(89, 2, 203);
+    border: none;
+  }
+  table th,
+  table tr td {
+    font-size: 50px;
+  }
+  .sre {
+    top: 43%;
+    transform: scale(3);
+  }
+  .sree {
+    top: 30%;
     
-       .infotitle{
-        font-size: 35px;
-       }
-       #credit{
-        height: 100px;
-       }
-        #client,#search{
-            width: 100%;
-            height: 200px;
-            border-radius: 30px;
-            outline: none;
-            background-color: black;
-            border: none;
-            color: white;
-            margin-bottom: 50px;
-            margin-top: 20px;
-            font-size: 70px;
-            }
-            .btna{
-                width: 50%;
-                height: 50px;
-                border-radius: 40px;
-                transition: .5s;
-                color: white;
-                font-size: 30px;
-                background-color: rgb(89, 2, 203);
-                border: none;
-    
-    
-            }
-            .btn{
-        
-                width: 50%;
-                height: 100px;
-                border-radius: 40px;
-                transition: .5s;
-                color: white;
-                font-size: 40px;
-                background-color: rgb(89, 2, 203);
-                border: none;
-                }
-                table th,table tr td{
-                    font-size: 50px;
-                }
-                   #sure{
-                    top: 43%;
-                    transform: scale(3);
-                   }
-                   .suree{
-                    top: 170px;
-                    transform: scale(1);
-                  left: 50px;
-                   }
-                   .tb{
-                    font-size: 20px;
-                   }
-    }
+    transform: scale(1.2);
+    left: 50px;
+  }
+  .tb {
+    font-size: 20px;
+  }
+}
