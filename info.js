@@ -1,4 +1,3 @@
-
 let title=document.getElementById('title')
 let btn=document.getElementById('btn')
 let tbody=document.getElementById('tbody')
@@ -97,7 +96,7 @@ let btnno=document.getElementById('btnno')
 function sure(id){
   suree.style.display='block'
   localStorage.setItem('idremove',JSON.stringify(id))
-  
+  content.style.display='none'
   }
   btnyes.onclick=function(){
   id=JSON.parse(localStorage.idremove);
@@ -108,9 +107,10 @@ function sure(id){
     totall.innerHTML=`المجموع : ${total()} دج`
   check()
     suree.style.display='none'
+    content.style.display='block'
   }
   btnno.onclick=function(){
   
   suree.style.display='none'
-  
+  content.style.display='block'
   }
