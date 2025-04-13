@@ -12,7 +12,7 @@ let arr=[]
 let totall=document.getElementById('total')
 
 let are=[]
-function ofon(){
+
 are=JSON.parse(localStorage.clients)
 let j=JSON.parse(localStorage.infoclient);
 j=+j;
@@ -116,15 +116,6 @@ else{
   suree.style.display='none'
   content.style.display='block'
   }
-}
-window.onload=function(){
-  if(window.navigator.onLine){
-    ofon()
-  }
-  else{ ofon()}
-}
-window.addEventListener("online",function(){ ofon()})
-window.addEventListener("offline",function(){ ofon()})
 
 function sure(id){
   who.innerHTML=`${arr[id]}`
