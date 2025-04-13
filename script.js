@@ -11,7 +11,7 @@ let btnyes=document.getElementById('btnyes')
 let btnno=document.getElementById('btnno')
 let content=document.getElementById('content')
 let who=document.getElementById('who')
-function ofon(){
+
 if (localStorage.clients != null) {
   arr = JSON.parse(localStorage.clients);
 } else {
@@ -67,15 +67,8 @@ btnno.onclick=function(){
 suree.style.display='none'
 content.style.display='block'
 }
-}
-window.onload=function(){
-  if(window.navigator.onLine){
-    ofon()
-  }
-  else{ ofon()}
-}
-window.addEventListener("online",function(){ ofon()})
-window.addEventListener("offline",function(){ ofon()})
+
+
 
 
 
