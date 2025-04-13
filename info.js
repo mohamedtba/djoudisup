@@ -2,10 +2,17 @@ let title=document.getElementById('title')
 let btn=document.getElementById('btn')
 let tbody=document.getElementById('tbody')
 let inpcrd=document.getElementById('credit')
+
+let suree=document.getElementById('sure')
+let btnyes=document.getElementById('btnyes')
+let btnno=document.getElementById('btnno')
+let who=document.getElementById('who')
+
 let arr=[]
 let totall=document.getElementById('total')
 
 let are=[]
+function ofon(){
 are=JSON.parse(localStorage.clients)
 let j=JSON.parse(localStorage.infoclient);
 j=+j;
@@ -90,18 +97,9 @@ else{
   totall.style.borderRadius='10px'
 }
 }
-let suree=document.getElementById('sure')
-let btnyes=document.getElementById('btnyes')
-let btnno=document.getElementById('btnno')
-let who=document.getElementById('who')
 
  
-function sure(id){
-   who.innerHTML=`${arr[id]}`
-  suree.style.display='block'
-  localStorage.setItem('idremove',JSON.stringify(id))
-  content.style.display='none'
-  }
+
   btnyes.onclick=function(){
   id=JSON.parse(localStorage.idremove);
   
@@ -118,3 +116,19 @@ function sure(id){
   suree.style.display='none'
   content.style.display='block'
   }
+}
+window.onload=function(){
+  if(window.navigator.onLine){
+    ofon()
+  }
+  else{ ofon()}
+}
+window.addEventListener("online",function(){ ofon()})
+window.addEventListener("offline",function(){ ofon()})
+
+function sure(id){
+  who.innerHTML=`${arr[id]}`
+ suree.style.display='block'
+ localStorage.setItem('idremove',JSON.stringify(id))
+ content.style.display='none'
+ }
