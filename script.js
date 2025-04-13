@@ -5,6 +5,12 @@ let arr;
 let first = document.querySelector(".first");
 let sr = document.getElementById("search");
 let second = document.querySelector(".second");
+
+let suree=document.getElementById('sure')
+let btnyes=document.getElementById('btnyes')
+let btnno=document.getElementById('btnno')
+let content=document.getElementById('content')
+let who=document.getElementById('who')
 function ofon(){
 if (localStorage.clients != null) {
   arr = JSON.parse(localStorage.clients);
@@ -40,12 +46,39 @@ function Show() {
   }
   tbody.innerHTML = table;
 }
-function delet(id) {
+
+
+ 
+ 
+
+
+btnyes.onclick=function(){
+id=JSON.parse(localStorage.idremove);
+
   localStorage.removeItem(arr[id]);
   arr.splice(id, 1);
   localStorage.setItem("clients", JSON.stringify(arr));
   Show();
+  suree.style.display='none'
+  content.style.display='block'
 }
+btnno.onclick=function(){
+
+suree.style.display='none'
+content.style.display='block'
+}
+}
+window.onload=function(){
+  if(window.navigator.onLine){
+    ofon()
+  }
+  else{ ofon()}
+}
+window.addEventListener("online",function(){ ofon()})
+window.addEventListener("offline",function(){ ofon()})
+
+
+
 
 function inf(id) {
   localStorage.setItem("infoclient", JSON.stringify(id));
@@ -79,38 +112,9 @@ function search() {
   }
   
 }
-let suree=document.getElementById('sure')
-let btnyes=document.getElementById('btnyes')
-let btnno=document.getElementById('btnno')
-let content=document.getElementById('content')
-let who=document.getElementById('who')
 function sure(id){
   who.innerHTML=`${arr[id]}`
 suree.style.display='block'
 localStorage.setItem('idremove',JSON.stringify(id))
 content.style.display='none'
 }
-btnyes.onclick=function(){
-id=JSON.parse(localStorage.idremove);
-
-  localStorage.removeItem(arr[id]);
-  arr.splice(id, 1);
-  localStorage.setItem("clients", JSON.stringify(arr));
-  Show();
-  suree.style.display='none'
-  content.style.display='block'
-}
-btnno.onclick=function(){
-
-suree.style.display='none'
-content.style.display='block'
-}
-}
-window.onload=function(){
-  if(window.navigator.onLine){
-    ofon()
-  }
-  else{ ofon()}
-}
-window.addEventListener("online",function(){ ofon()})
-window.addEventListener("offline",function(){ ofon()})
