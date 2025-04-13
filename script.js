@@ -5,6 +5,7 @@ let arr;
 let first = document.querySelector(".first");
 let sr = document.getElementById("search");
 let second = document.querySelector(".second");
+function ofon(){
 if (localStorage.clients != null) {
   arr = JSON.parse(localStorage.clients);
 } else {
@@ -104,3 +105,12 @@ btnno.onclick=function(){
 suree.style.display='none'
 content.style.display='block'
 }
+}
+window.onload=function(){
+  if(window.navigator.onLine){
+    ofon()
+  }
+  else{ ofon()}
+}
+window.addEventListener("online",function(){ ofon()})
+window.addEventListener("offline",function(){ ofon()})
